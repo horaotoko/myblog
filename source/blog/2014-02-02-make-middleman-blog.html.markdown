@@ -114,6 +114,8 @@ originっていうリモートリポジトリが設定されていないのが�
 
     $ git remote add git@github.com:USER/USER.github.io.git
 
+そして再度 `$ bundle exec middleman deploy`をすれば完了です。
+
 実はここ、ドメインやプロジェクトページによって少々操作や設定が異なって、gh-pagesっていうブランチからじゃないとデプロイできないってことがあるらしいです。今回は`http://USER.github.io/`にブログを設置するという前提で行っております。
 
 以上で、GitHub PagesにMiddlemanでブログを構築することができます。カスタマイズなどは今後自分でもやりながら公開していきたいと思います。
