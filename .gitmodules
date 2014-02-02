@@ -1,0 +1,3 @@
+[submodule "middleman-pure"]
+	path = middleman-pure
+	url = git://github.com/yterajima/middleman-pure.git
