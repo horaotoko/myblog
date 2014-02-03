@@ -9,8 +9,8 @@ html
     = stylesheet_link_tag "application"
   body
     = partial "header"
-    #contents.container.pure-g-r
-      #main.pure-u-1-2 role="main"
+    .container
+      #main role="main"
         = yield
       = partial "sidebar"
     = partial "footer"
