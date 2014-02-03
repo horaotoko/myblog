@@ -9,9 +9,6 @@ gem "middleman-syntax"
 
 gem "slim"
 
-gem 'middleman-pure', :github => 'yterajima/middleman-pure'
-gem 'font-awesome-middleman'
-
 gem "redcarpet"
 
 # For feed.xml.builder

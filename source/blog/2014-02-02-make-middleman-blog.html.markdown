@@ -59,7 +59,7 @@ erbじゃなくてhamlとかslim使いたいなどのカスタマイズについ
 
 とりあえずどんなのが出力されたか確認してみましょう。黒い画面で以下のコマンドを打ち込んでサーバーを立ち上げます。
 
-    $ middleman server
+    $ bundle exec middleman server
 
 そして[http://localhost:4567/](http://localhost:4567/)にアクセス。
 
@@ -89,7 +89,7 @@ erbじゃなくてhamlとかslim使いたいなどのカスタマイズについ
 
 ようやくここまで来ました。まずは必要なデプロイに必要なgemを入れます。Gemfileを開いて`gem 'middleman-deploy'`を追加してください。そのあとに、
 
-    $ bundle install 
+    $ bundle install --path=vendor
 
 で、必要なgem群をインストールします。デプロイするために必要なツールたちです。
 
