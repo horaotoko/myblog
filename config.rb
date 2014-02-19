@@ -29,7 +29,7 @@ activate :blog do |blog|
 
   # Enable pagination
   blog.paginate = true
-  blog.per_page = 10
+  blog.per_page = 5
   blog.page_link = "page/{num}"
 end
 
@@ -94,6 +94,12 @@ Slim::Engine.set_default_options :shortcut => {
   '.' => {:tag => 'div', :attr => 'class'},
   '&' => {:tag => 'input', :attr => 'type'}
 }
+
+require "susy"
+
+activate :disqus do |d|
+  d.shortname = "horaotoko"
+end
 
 # Markdown settings
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true

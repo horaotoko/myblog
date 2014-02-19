@@ -6,8 +6,10 @@ gem "middleman-deploy"
 gem "middleman-livereload"
 gem "middleman-autoprefixer"
 gem "middleman-syntax"
+gem "middleman-disqus"
 
 gem "slim"
+gem "susy"
 
 gem "redcarpet"
 

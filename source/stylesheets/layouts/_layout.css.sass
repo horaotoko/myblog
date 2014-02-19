@@ -1,3 +1,10 @@
-.container
-  max-width: 900px
-  margin: 0 auto
+body
+  =base-font
+  #wrapper
+    padding: 0 15px
+    .container
+      +container
+      #main
+        +span-columns(22,30)
+        padding: 60px 30px 60px 0
+        border-right: 1px solid rgba(0, 0, 0, .08)

@@ -1,0 +1,48 @@
+=base-font
+  font-size: 15px
+  font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+
+=google-font
+  font-family: 'Raleway', sans-serif
+  font-weight: 500
+
+@font-face
+  font-family: 'LigatureSymbols'
+  src: url('LigatureSymbols-2.11.eot')
+  src: url('LigatureSymbols-2.11.eot?#iefix') format("embedded-opentype"), url('LigatureSymbols-2.11.woff') format("woff"), url('LigatureSymbols-2.11.ttf') format("truetype"), url('LigatureSymbols-2.11.svg#LigatureSymbols') format("svg")
+  src: url('LigatureSymbols-2.11.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+
+
+.lsf
+  font-family: 'LigatureSymbols'
+  -webkit-text-rendering: optimizeLegibility
+  -moz-text-rendering: optimizeLegibility
+  -ms-text-rendering: optimizeLegibility
+  -o-text-rendering: optimizeLegibility
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  -o-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+.lsf-icon
+  &:before
+    font-family: 'LigatureSymbols'
+    -webkit-text-rendering: optimizeLegibility
+    -moz-text-rendering: optimizeLegibility
+    -ms-text-rendering: optimizeLegibility
+    -o-text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: antialiased
+    -ms-font-smoothing: antialiased
+    -o-font-smoothing: antialiased
+    font-smoothing: antialiased
+    content: attr(title)
+    margin-right: 0.3em
+    font-size: 130%
+  &.amazon:before
+    content: '\E007'

@@ -1,20 +1,22 @@
----
-pageable: true
-per_page: 10
----
-- if paginate && num_pages > 1
-  p
-    | Page #{page_number} of #{num_pages}
-  - if prev_page
-    p= link_to 'Previous page', prev_page
-- page_articles.each_with_index do |article, i|
-  h2
-    = link_to article.title, article
-    span= article.date.strftime('%b %e')
-  /!
-    | use article.summary(250) if you have Nokogiri available to show just
-    | the first 250 characters
-  = article.body
+- page_articles.each do |article|
+  article
+    .post-header
+      time= article.date.strftime("%Y/%m/%d")
+      ul.tags
+        li
+      h2
+        a href=(article.url)
+          = article.title
+    .post-body
+      = article.body
 - if paginate
-  - if next_page
-    p= link_to 'Next page', next_page
+  .paging-module
+    ul
+      li
+        - if prev_page
+          = link_to prev_page do
+            .paging.prev
+      li
+        - if next_page
+          = link_to next_page do
+            .paging.next

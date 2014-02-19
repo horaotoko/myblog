@@ -1,1 +1,31 @@
 header
+  border-bottom: solid 1px rgba(0, 0, 0, .08)
+  .inner
+    +container
+    padding: 2em 0
+    +clearfix
+    .blog-name
+      +span-columns(10,30)
+      font-size: 24px
+      color: $red
+      +google-font
+    nav
+      +span-columns(15 omega,30)
+      ul
+        width: auto
+        float: right
+        list-style: none
+        +clearfix
+        li
+          display: inline-block
+          float: right
+          text-align: right
+          margin: 0 0 0 30px
+          a
+            text-decoration: none
+            color: $red
+            font-size: 24px
+            &:hover
+              color: lighten($red, 20%)
+              +transition(.3s)
+

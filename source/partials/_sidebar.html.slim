@@ -1,19 +1,27 @@
 aside
-  h2 Recent Articles
-  ol
-    - blog.articles[0...10].each do |article|
-      li
-        = link_to article.title, article
-        span= article.date.strftime('%b %e')
-  h2 Tags
-  ol
-    - blog.tags.each do |tag, articles|
-      li
-        = link_to tag, tag_path(tag)
-        | (#{articles.size})
-  h2 By Year
-  ol
-    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      li
-        = link_to year, blog_year_path(year)
-        | (#{articles.size})
+  section
+    h2 Profile
+    .author-photo
+      = image_tag 'me.jpg'
+    p こんちはほらちゃんです！
+
+  section
+    h2 Recent Entries
+    ol
+      - blog.articles[0...10].each do |article|
+        li
+          = link_to article.title, article
+  section
+    h2 Tags
+    ol
+      - blog.tags.each do |tag, articles|
+        li
+          = link_to tag, tag_path(tag)
+          | (#{articles.size})
+  section
+    h2 Archives
+    ol
+      - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+        li
+          = link_to year, blog_year_path(year)
+          | (#{articles.size})
