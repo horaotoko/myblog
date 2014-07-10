@@ -6,9 +6,14 @@ header
     +clearfix
     .blog-name
       +span-columns(10,30)
-      font-size: 24px
-      color: $red
-      +google-font
+      a
+        font-size: 24px
+        color: $red
+        text-decoration: none
+        +google-font
+        &:hover
+          color: lighten($red, 20%)
+          +transition(.3s)
     nav
       +span-columns(15 omega,30)
       ul
@@ -18,7 +23,7 @@ header
         +clearfix
         li
           display: inline-block
-          float: right
+          float: left
           text-align: right
           margin: 0 0 0 30px
           a

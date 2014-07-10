@@ -5,7 +5,7 @@ html
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible"
     link href="http://fonts.googleapis.com/css?family=Raleway:500,400" rel="stylesheet" type="text/css"
     title
-      | Blog Title#{' - ' + current_article.title unless current_article.nil?}
+      | #{current_article.title unless current_article.nil?}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = stylesheet_link_tag "application"
   body
@@ -13,19 +13,18 @@ html
       = partial "header"
       .container
         #main role="main"
-          - wrap_layout :layout do
-            article
-              .post-header
-                time current_article.date.strftime("%Y/%m/%d")
-                ul.article-tags
-                  - current_article.tags.each do |tag|
-                    li = link_to tag, tag_path(tag)
-                h2 = current_article.title
-              .post-body
-                = yield
-                == partial "share"
-              .post-comment
-                = disqus
+          article
+            .post-header
+              time current_article.date.strftime("%Y/%m/%d")
+              ul.article-tags
+                - current_article.tags.each do |tag|
+                  li = link_to tag, tag_path(tag)
+              h2 = current_article.title
+            .post-body
+              = yield
+              == partial "share"
+            .post-comment
+              = disqus
         = partial "sidebar"
       = partial "footer"
 
