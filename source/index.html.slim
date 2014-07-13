@@ -1,13 +1,14 @@
 - page_articles.each do |article|
   article
     .post-header
-      time= article.date.strftime("%Y/%m/%d")
-      ul.tags
-        - article.tags.each do |tag|
-          li = link_to tag, tag_path(tag)
+      time
+        = article.date.strftime("%Y/%m/%d")
       h2
         a href=(article.url)
           = article.title
+      ul.tags
+        - article.tags.each do |tag|
+          li = link_to tag, tag_path(tag)
     .post-body
       = article.body
 - if paginate
