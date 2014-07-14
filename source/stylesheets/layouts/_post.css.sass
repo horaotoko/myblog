@@ -1,15 +1,65 @@
 article
+  margin: 0 0 60px
   .post-header
     +clearfix
     time
       color: $red
       float: left
-    .tag
+      +google-font
+      margin: 0 0 15px
     h2
       clear: both
       a
         font-size: 18px
         text-decoration: none
         color: $black
+        font-weight: bold
+        &:hover
+          color: lighten($black, 50%)
+          +transition(.3s)
+    .tags
+      margin: 15px 0 25px
+      a
+        color: lighten($black, 50%)
+        text-decoration: none
+        &:hover
+          color: black
+          +transition(.3s)
   .post-body
+    p
+      line-height: 1.8
+      margin: 0 0 1.2em
+    h3
+      font-size: 18px
+      color: $red
+      margin: 45px 0 15px
+    h4
+      font-size: 15px
+      font-weight: bold
+      margin: 30px 15px
+    img
+      max-width: 100%
+      border: 1px solid lighten($black, 50%)
+      text-align: center
+    ul,ol
+      list-style-type: circle
+      padding: 0 0 0 17px
+      margin: 0 0 1.2em
+      li
+        line-height: 1.8
+    pre
+      background: $black
+      color: $white
+      padding: 30px
+      +border-radius(6px)
+      margin: 15px 0
+    a
+      color: lighten($black, 50%)
+      text-decoration: none
+      &:hover
+        color: black
+        +transition(.3s)
+    .date
+      margin: 0 0 0 15px
   .post-comment
+    padding: 30px 0 0
